@@ -1,0 +1,69 @@
+{
+  "feature_columns": [
+    "category",
+    "amount",
+    "age_at_transaction",
+    "days_until_card_expires",
+    "loc_delta",
+    "trans_volume_mavg",
+    "trans_volume_mstd",
+    "trans_freq",
+    "loc_delta_mavg"
+  ],
+  "categorical_columns": [
+    "category"
+  ],
+  "numeric_columns": [
+    "amount",
+    "age_at_transaction",
+    "days_until_card_expires",
+    "loc_delta",
+    "trans_volume_mavg",
+    "trans_volume_mstd",
+    "trans_freq",
+    "loc_delta_mavg"
+  ],
+  "category_classes": [
+    "Cash Withdrawal",
+    "Clothing",
+    "Domestic Transport",
+    "Electronics",
+    "Grocery",
+    "Health/Beauty",
+    "Holliday/Travel",
+    "Jewelery",
+    "Restaurant/Cafeteria",
+    "Sports/Outdoors"
+  ],
+  "metrics": {
+    "xgboost": {
+      "accuracy": 0.9969817015657423,
+      "f1_score": 0.39622641509433965,
+      "precision": 0.28,
+      "recall": 0.6774193548387096,
+      "roc_auc": 0.9750854329083145
+    },
+    "random_forest": {
+      "accuracy": 0.9976891152612715,
+      "f1_score": 0.40963855421686746,
+      "precision": 0.3269230769230769,
+      "recall": 0.5483870967741935,
+      "roc_auc": 0.9480234260614933
+    },
+    "ensemble": {
+      "accuracy": 0.9979720807394831,
+      "f1_score": 0.4819277108433735,
+      "precision": 0.38461538461538464,
+      "recall": 0.6451612903225806,
+      "roc_auc": 0.9634699091813523
+    }
+  },
+  "training_samples": 84816,
+  "test_samples": 21204,
+  "fraud_rate_train": 0.0014619883040935672,
+  "fraud_rate_test": 0.0014619883040935672,
+  "pipeline_steps": [
+    "preprocessor (ColumnTransformer)",
+    "classifier"
+  ]
+}
