@@ -18,7 +18,7 @@ st.set_page_config(
 )
 
 # API URL - Use environment variable or default to deployed Render API
-API_URL = os.environ.get("API_URL", "https://model-deployment2026.onrender.com")
+API_URL = os.environ.get("API_URL", "https://it5006-model-deployment.onrender.com")
 
 # ============================================================
 # HEADER
